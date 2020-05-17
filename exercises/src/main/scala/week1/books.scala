@@ -29,7 +29,10 @@ object books extends App {
     a2 <- b2.authors
     if a1==a2
   }yield a1
-
-
   println(twoBooks)
+
+  println(for(book <- books; a <- book.authors if a startsWith "Bird") yield book.title)
+  println(books.flatMap(book => book.authors.withFilter(a => a.startsWith("Bird")).map(x => book.title)))
+
+
 }
