@@ -1,5 +1,7 @@
 package week5
 
+import week5.observer.Publisher
+
 class BankAccount extends Publisher {
   private var balance = 0
 

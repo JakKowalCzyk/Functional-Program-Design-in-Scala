@@ -1,5 +1,7 @@
 package week5
 
+import week5.observer.{Publisher, Subscriber}
+
 class Consolidator(observed: List[BankAccount]) extends Subscriber {
 
   observed.foreach(_.subscribe(this))
